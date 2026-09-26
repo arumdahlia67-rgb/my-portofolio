@@ -1,217 +1,301 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("all");
+
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 font-sans">
-      {/* Header / Navbar */}
-      <nav className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-          <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+    <main className="min-h-screen bg-[#0d0f12] text-zinc-300 font-sans antialiased selection:bg-zinc-800 selection:text-white">
+      {/* Header */}
+      <header className="border-b border-zinc-800/80 sticky top-0 bg-[#0d0f12]/90 backdrop-blur-md z-50">
+        <div className="max-w-3xl mx-auto px-6 py-5 flex justify-between items-center">
+          <a href="#" className="text-zinc-100 font-semibold tracking-tight text-base hover:text-white transition">
             Arum Dahlia
-          </span>
-          <div className="flex gap-4 text-sm font-medium text-slate-300 overflow-x-auto py-1">
-            <a href="#about" className="hover:text-cyan-400 transition whitespace-nowrap">Tentang</a>
-            <a href="#work" className="hover:text-cyan-400 transition whitespace-nowrap">Pekerjaan</a>
-            <a href="#education" className="hover:text-cyan-400 transition whitespace-nowrap">Pendidikan</a>
-            <a href="#achievements" className="hover:text-cyan-400 transition whitespace-nowrap">Prestasi</a>
-            <a href="#certifications" className="hover:text-cyan-400 transition whitespace-nowrap">Sertifikat</a>
-          </div>
+          </a>
+          <a
+            href="mailto:arumdahlia67@gmail.com"
+            className="text-xs text-zinc-400 hover:text-zinc-100 transition border border-zinc-800 hover:border-zinc-700 px-3 py-1.5 rounded-md"
+          >
+            Hubungi
+          </a>
         </div>
-      </nav>
+      </header>
 
-      <div className="max-w-5xl mx-auto px-6 py-12 space-y-16">
-        {/* Hero Section */}
-        <section className="text-center space-y-6 pt-6">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800 text-cyan-300 text-sm font-medium">
-            ✨ AI-Assisted Developer & Accounting Graduate
-          </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-            Halo, Saya <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">Arum Dahlia</span>
+      <div className="max-w-3xl mx-auto px-6 py-12 space-y-12">
+        {/* Hero / Header Ringkas */}
+        <section className="space-y-4">
+          <h1 className="text-3xl md:text-4xl font-semibold text-zinc-100 tracking-tight leading-snug">
+            Arum Dahlia
           </h1>
-          <p className="text-slate-300 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-            Lulusan SMK Negeri 2 Blora tahun 2025 jurusan Akuntansi dan Keuangan Lembaga. Bukan orang IT, namun bersemangat memanfaatkan AI untuk eksplorasi <span className="text-cyan-400 font-semibold">Web Development</span> dan <span className="text-cyan-400 font-semibold">Keuangan Digital</span>.
+          <p className="text-base md:text-lg text-zinc-400 font-normal leading-relaxed">
+            Lulusan SMK Negeri 2 Blora (2025) jurusan Akuntansi & Keuangan Lembaga. Saat ini bekerja di PT PxxxxWxxx Indonesia, serta mengeksplorasi penerapannya dalam teknologi web dan keuangan digital dengan bantuan AI.
           </p>
-          <div className="flex justify-center gap-4 pt-2">
-            <a
-              href="#about"
-              className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition shadow-lg shadow-cyan-500/20"
+        </section>
+
+        {/* Navigation Tabs Filter Tools */}
+        <section className="border-y border-zinc-800/80 py-3">
+          <div className="flex gap-2 overflow-x-auto no-scrollbar text-xs">
+            <button
+              onClick={() => setActiveTab("all")}
+              className={`px-3.5 py-1.5 rounded-md transition font-medium whitespace-nowrap ${
+                activeTab === "all"
+                  ? "bg-zinc-100 text-zinc-900"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900"
+              }`}
             >
-              Baca Perkenalan
-            </a>
-            <a
-              href="mailto:arumdahlia67@gmail.com"
-              className="px-6 py-3 rounded-xl border border-slate-700 hover:bg-slate-900 text-slate-200 font-semibold transition"
+              Semua
+            </button>
+            <button
+              onClick={() => setActiveTab("about")}
+              className={`px-3.5 py-1.5 rounded-md transition font-medium whitespace-nowrap ${
+                activeTab === "about"
+                  ? "bg-zinc-100 text-zinc-900"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900"
+              }`}
             >
-              Hubungi Saya
-            </a>
+              Tentang
+            </button>
+            <button
+              onClick={() => setActiveTab("skills")}
+              className={`px-3.5 py-1.5 rounded-md transition font-medium whitespace-nowrap ${
+                activeTab === "skills"
+                  ? "bg-zinc-100 text-zinc-900"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900"
+              }`}
+            >
+              Keahlian
+            </button>
+            <button
+              onClick={() => setActiveTab("work")}
+              className={`px-3.5 py-1.5 rounded-md transition font-medium whitespace-nowrap ${
+                activeTab === "work"
+                  ? "bg-zinc-100 text-zinc-900"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900"
+              }`}
+            >
+              Pekerjaan
+            </button>
+            <button
+              onClick={() => setActiveTab("education")}
+              className={`px-3.5 py-1.5 rounded-md transition font-medium whitespace-nowrap ${
+                activeTab === "education"
+                  ? "bg-zinc-100 text-zinc-900"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900"
+              }`}
+            >
+              Pendidikan
+            </button>
+            <button
+              onClick={() => setActiveTab("achievements")}
+              className={`px-3.5 py-1.5 rounded-md transition font-medium whitespace-nowrap ${
+                activeTab === "achievements"
+                  ? "bg-zinc-100 text-zinc-900"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900"
+              }`}
+            >
+              Prestasi
+            </button>
+            <button
+              onClick={() => setActiveTab("certifications")}
+              className={`px-3.5 py-1.5 rounded-md transition font-medium whitespace-nowrap ${
+                activeTab === "certifications"
+                  ? "bg-zinc-100 text-zinc-900"
+                  : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900"
+              }`}
+            >
+              Sertifikat
+            </button>
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="space-y-4">
-          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Perkenalan
-          </h2>
-          <div className="bg-slate-900/60 border border-slate-800 p-6 md:p-8 rounded-2xl space-y-4">
-            <p className="text-slate-300 leading-relaxed">
-              Nama saya Arum Dahlia, seorang lulusan SMK Negeri 2 Blora tahun 2025 jurusan Akuntansi dan Keuangan Lembaga. Saya bukan orang IT, tapi punya minat di bidang web development. Saya tidak begitu memahami teknik coding, melainkan berkreasi dengan bantuan AI.
-            </p>
-            <p className="text-slate-300 leading-relaxed">
-              Saat ini saya lagi fokus belajar di bidang keuangan digital dan memanfaatkan AI untuk mempermudah dalam pemecahan masalah. Saya sangat bersemangat mempelajari teknologi AI untuk masa depan dunia dan sebagai partner bertukar pikiran serta informasi, serta berminat menjadi seorang developer dengan bantuan AI. Selain itu, saya mempunyai hobi membaca dan tertarik mempelajari hal-hal baru.
-            </p>
-          </div>
-        </section>
-
-        {/* Pekerjaan Saat Ini */}
-        <section id="work" className="space-y-4">
-          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Pekerjaan Saat Ini
-          </h2>
-          <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-cyan-950/30 border border-cyan-500/40 p-6 md:p-8 rounded-2xl space-y-3">
-            <div className="flex justify-between items-start flex-wrap gap-2">
-              <div>
-                <span className="inline-block px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full text-xs font-semibold mb-2">
-                  Pekerjaan Aktif
-                </span>
-                <h3 className="text-2xl font-bold text-slate-100">PT PxxxxWxxx Indonesia</h3>
+        {/* Content Sections */}
+        <div className="space-y-12 min-h-[400px]">
+          {/* Tentang Saya */}
+          {(activeTab === "all" || activeTab === "about") && (
+            <section className="space-y-3">
+              <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500">
+                / Tentang Saya
+              </h2>
+              <div className="space-y-3 text-zinc-300 leading-relaxed font-normal text-sm md:text-base">
+                <p>
+                  Nama saya Arum Dahlia. Saya merupakan lulusan SMK Negeri 2 Blora tahun 2025 dari jurusan Akuntansi dan Keuangan Lembaga. Meskipun tidak berlatar belakang pendidikan IT, saya memiliki ketertarikan tinggi di bidang <span className="text-zinc-100 font-medium">web development</span>.
+                </p>
+                <p>
+                  Dalam proses pembuatan dan pengembangan web, saya memanfaatkan kecerdasan buatan (AI) sebagai mitra bertukar pikiran, penyelesaian masalah, dan akselerasi pembelajaran. Saat ini saya berfokus mempelajari ekosistem <span className="text-zinc-100 font-medium">keuangan digital</span> serta pemanfaatan AI untuk efisiensi kerja. Di luar kegiatan profesional, saya gemar membaca dan tertarik mempelajari hal-hal baru.
+                </p>
               </div>
-              <span className="text-xs font-medium text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
-                Sekarang
-              </span>
-            </div>
-            <p className="text-slate-300 leading-relaxed">
-              Dan sekarang saya lagi bekerja di PT PxxxxWxxx Indonesia, membantu lancarnya operasional perusahaan dan bekerja sesuai SOP.
-            </p>
-          </div>
-        </section>
+            </section>
+          )}
 
-        {/* Riwayat Pendidikan */}
-        <section id="education" className="space-y-6">
-          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Riwayat Pendidikan (12 Tahun Sekolah)
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-2">
-              <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Sekolah Dasar</span>
-              <h3 className="text-lg font-bold text-slate-100">SDN Pxxxx</h3>
-              <p className="text-slate-400 text-sm">Pendidikan Dasar</p>
-            </div>
-            <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-2">
-              <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Sekolah Menengah Pertama</span>
-              <h3 className="text-lg font-bold text-slate-100">MTs N Blora</h3>
-              <p className="text-slate-400 text-sm">Pendidikan Menengah Pertama</p>
-            </div>
-            <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-2 border-cyan-500/30">
-              <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Sekolah Menengah Kejuruan</span>
-              <h3 className="text-lg font-bold text-slate-100">SMK N 2 Blora</h3>
-              <p className="text-slate-400 text-sm">Akuntansi dan Keuangan Lembaga (Lulus 2025)</p>
-            </div>
-          </div>
-        </section>
+          {/* Keahlian & Keterampilan */}
+          {(activeTab === "all" || activeTab === "skills") && (
+            <section className="space-y-4">
+              <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500">
+                / Keahlian & Keterampilan
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Akuntansi & Keuangan Lembaga",
+                  "Public Speaking / Penyiaran",
+                  "Komunikasi & Kerja Sama Tim",
+                  "Pemanfaatan AI (AI-Assisted Workflow)",
+                  "Keuangan Digital",
+                  "Next.js & React",
+                  "Tailwind CSS",
+                  "Git & GitHub",
+                  "Vercel Deployment"
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="text-xs font-medium text-zinc-300 bg-zinc-900/60 border border-zinc-800/80 px-3 py-1.5 rounded-md hover:border-zinc-700 hover:text-zinc-100 transition"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </section>
+          )}
 
-        {/* Prestasi */}
-        <section id="achievements" className="space-y-6">
-          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Prestasi Selama Sekolah
-          </h2>
-          
-          <div className="space-y-6">
-            {/* Prestasi MTs */}
-            <div className="space-y-3">
-              <h3 className="text-lg font-semibold text-slate-300 border-l-4 border-cyan-400 pl-3">MTs N Blora</h3>
-              <div className="grid md:grid-cols-1 gap-4">
-                <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-2xl flex items-start gap-4">
-                  <div className="text-2xl">🥉</div>
+          {/* Pekerjaan */}
+          {(activeTab === "all" || activeTab === "work") && (
+            <section className="space-y-4">
+              <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500">
+                / Pengalaman Kerja Saat Ini
+              </h2>
+              <div className="space-y-2 border border-zinc-800/80 p-5 rounded-lg bg-zinc-900/30">
+                <div className="flex justify-between items-baseline flex-wrap gap-2">
+                  <h3 className="text-base font-semibold text-zinc-100">
+                    PT PxxxxWxxx Indonesia
+                  </h3>
+                  <span className="text-xs text-zinc-500 font-mono">Sekarang</span>
+                </div>
+                <p className="text-xs text-zinc-400 font-medium">Staf Operasional</p>
+                <p className="text-sm text-zinc-400 leading-relaxed pt-1">
+                  Membantu kelancaran operasional perusahaan dan bekerja sesuai dengan Standar Operasional Prosedur (SOP) yang berlaku.
+                </p>
+              </div>
+            </section>
+          )}
+
+          {/* Pendidikan */}
+          {(activeTab === "all" || activeTab === "education") && (
+            <section className="space-y-4">
+              <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500">
+                / Riwayat Pendidikan
+              </h2>
+              <div className="space-y-4">
+                <div className="flex justify-between items-start border-b border-zinc-800/40 pb-3">
                   <div>
-                    <h4 className="font-bold text-slate-100">Medali Perunggu Olimpiade Pendidikan Agama Islam (2022)</h4>
+                    <h3 className="text-base font-semibold text-zinc-100">SMK Negeri 2 Blora</h3>
+                    <p className="text-sm text-zinc-400">Akuntansi dan Keuangan Lembaga</p>
+                  </div>
+                  <span className="text-xs text-zinc-500 font-mono">Lulus 2025</span>
+                </div>
+                <div className="flex justify-between items-start border-b border-zinc-800/40 pb-3">
+                  <div>
+                    <h3 className="text-base font-semibold text-zinc-100">MTs N Blora</h3>
+                    <p className="text-sm text-zinc-400">Pendidikan Menengah Pertama</p>
+                  </div>
+                </div>
+                <div className="flex justify-between items-start border-b border-zinc-800/40 pb-3">
+                  <div>
+                    <h3 className="text-base font-semibold text-zinc-100">SDN Pxxxx</h3>
+                    <p className="text-sm text-zinc-400">Pendidikan Dasar</p>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
+          )}
 
-            {/* Prestasi SD */}
-            <div className="space-y-3">
-              <h3 className="text-lg font-semibold text-slate-300 border-l-4 border-cyan-400 pl-3">SDN Pxxxx</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-2xl flex items-start gap-3">
-                  <div className="text-xl">🥇</div>
-                  <div>
-                    <h4 className="font-bold text-slate-100 text-sm">Juara 1 Pencak Silat O2SN (2017)</h4>
-                    <p className="text-slate-400 text-xs">Tingkat Kecamatan</p>
+          {/* Prestasi */}
+          {(activeTab === "all" || activeTab === "achievements") && (
+            <section className="space-y-4">
+              <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500">
+                / Rekam Prestasi
+              </h2>
+              <div className="space-y-6 text-sm">
+                <div>
+                  <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">MTs N Blora</h3>
+                  <div className="py-2 border-b border-zinc-800/40 flex justify-between items-center">
+                    <span className="text-zinc-200">Medali Perunggu Olimpiade Pendidikan Agama Islam</span>
+                    <span className="text-xs font-mono text-zinc-500">2022</span>
                   </div>
                 </div>
-                <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-2xl flex items-start gap-3">
-                  <div className="text-xl">🥈</div>
-                  <div>
-                    <h4 className="font-bold text-slate-100 text-sm">Juara 2 Pencak Silat O2SN (2018)</h4>
-                    <p className="text-slate-400 text-xs">Tingkat Kecamatan</p>
-                  </div>
-                </div>
-                <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-2xl flex items-start gap-3">
-                  <div className="text-xl">🥈</div>
-                  <div>
-                    <h4 className="font-bold text-slate-100 text-sm">Juara 2 Pencak Silat POPDA (2018)</h4>
-                    <p className="text-slate-400 text-xs">Tingkat Kecamatan</p>
-                  </div>
-                </div>
-                <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-2xl flex items-start gap-3">
-                  <div className="text-xl">🥇</div>
-                  <div>
-                    <h4 className="font-bold text-slate-100 text-sm">Juara 1 Tim Bola Volly Putri (2019)</h4>
-                    <p className="text-slate-400 text-xs">Tingkat Kecamatan</p>
-                  </div>
-                </div>
-                <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-2xl flex items-start gap-3">
-                  <div className="text-xl">🥉</div>
-                  <div>
-                    <h4 className="font-bold text-slate-100 text-sm">Juara 3 Macapat Islami Lomba MAPSI (2018)</h4>
-                    <p className="text-slate-400 text-xs">Tingkat Kecamatan</p>
-                  </div>
-                </div>
-                <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-2xl flex items-start gap-3">
-                  <div className="text-xl">🎗️</div>
-                  <div>
-                    <h4 className="font-bold text-slate-100 text-sm">Juara Harapan 3 Lomba Tari Klasik (2016)</h4>
-                    <p className="text-slate-400 text-xs">Tingkat Kecamatan</p>
+
+                <div>
+                  <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">SDN Pxxxx</h3>
+                  <div className="space-y-1">
+                    <div className="py-2 border-b border-zinc-800/40 flex justify-between items-center">
+                      <span className="text-zinc-200">Juara 1 Pencak Silat O2SN (Kecamatan)</span>
+                      <span className="text-xs font-mono text-zinc-500">2017</span>
+                    </div>
+                    <div className="py-2 border-b border-zinc-800/40 flex justify-between items-center">
+                      <span className="text-zinc-200">Juara 2 Pencak Silat O2SN (Kecamatan)</span>
+                      <span className="text-xs font-mono text-zinc-500">2018</span>
+                    </div>
+                    <div className="py-2 border-b border-zinc-800/40 flex justify-between items-center">
+                      <span className="text-zinc-200">Juara 2 Pencak Silat POPDA (Kecamatan)</span>
+                      <span className="text-xs font-mono text-zinc-500">2018</span>
+                    </div>
+                    <div className="py-2 border-b border-zinc-800/40 flex justify-between items-center">
+                      <span className="text-zinc-200">Juara 1 Tim Bola Volly Putri (Kecamatan)</span>
+                      <span className="text-xs font-mono text-zinc-500">2019</span>
+                    </div>
+                    <div className="py-2 border-b border-zinc-800/40 flex justify-between items-center">
+                      <span className="text-zinc-200">Juara 3 Macapat Islami Lomba MAPSI (Kecamatan)</span>
+                      <span className="text-xs font-mono text-zinc-500">2018</span>
+                    </div>
+                    <div className="py-2 border-b border-zinc-800/40 flex justify-between items-center">
+                      <span className="text-zinc-200">Juara Harapan 3 Lomba Tari Klasik (Kecamatan)</span>
+                      <span className="text-xs font-mono text-zinc-500">2016</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </section>
+          )}
 
-        {/* Sertifikasi SMK N 2 Blora */}
-        <section id="certifications" className="space-y-6">
-          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Sertifikasi (SMK N 2 Blora)
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-cyan-500/50 transition">
-              <span className="text-xs font-semibold text-emerald-400 tracking-wider uppercase">Predikat: Kompeten</span>
-              <h3 className="text-lg font-bold text-slate-100">Uji Kompetensi Keahlian (UKK)</h3>
-              <p className="text-slate-400 text-sm">
-                Akuntansi dan Keuangan Lembaga.
-              </p>
-            </div>
-            <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-cyan-500/50 transition">
-              <span className="text-xs font-semibold text-emerald-400 tracking-wider uppercase">Predikat: Sangat Bagus</span>
-              <h3 className="text-lg font-bold text-slate-100">PKL Penyiar Radio</h3>
-              <p className="text-slate-400 text-sm">
-                Sertifikat Praktik Kerja Lapangan sebagai penyiar radio.
-              </p>
-            </div>
-            <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-cyan-500/50 transition">
-              <span className="text-xs font-semibold text-cyan-400 tracking-wider uppercase">Sertifikat Pelatihan</span>
-              <h3 className="text-lg font-bold text-slate-100">Viva Beauty</h3>
-              <p className="text-slate-400 text-sm">
-                Sertifikat pelatihan dari Viva Beauty.
-              </p>
-            </div>
-          </div>
-        </section>
+          {/* Sertifikasi */}
+          {(activeTab === "all" || activeTab === "certifications") && (
+            <section className="space-y-4">
+              <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500">
+                / Sertifikasi & Pelatihan
+              </h2>
+              <div className="space-y-3 text-sm">
+                <div className="p-4 border border-zinc-800/60 rounded-lg flex justify-between items-start">
+                  <div>
+                    <h3 className="font-medium text-zinc-100">Uji Kompetensi Keahlian (UKK)</h3>
+                    <p className="text-xs text-zinc-400 mt-1">Akuntansi dan Keuangan Lembaga (SMK N 2 Blora)</p>
+                  </div>
+                  <span className="text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-800/50 px-2 py-0.5 rounded">
+                    Kompeten
+                  </span>
+                </div>
+                <div className="p-4 border border-zinc-800/60 rounded-lg flex justify-between items-start">
+                  <div>
+                    <h3 className="font-medium text-zinc-100">PKL Penyiar Radio</h3>
+                    <p className="text-xs text-zinc-400 mt-1">Praktik Kerja Lapangan Penyiaran</p>
+                  </div>
+                  <span className="text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-800/50 px-2 py-0.5 rounded">
+                    Sangat Bagus
+                  </span>
+                </div>
+                <div className="p-4 border border-zinc-800/60 rounded-lg flex justify-between items-start">
+                  <div>
+                    <h3 className="font-medium text-zinc-100">Sertifikat Viva Beauty</h3>
+                    <p className="text-xs text-zinc-400 mt-1">Pelatihan & Pengembangan</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+        </div>
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 mt-20 py-8 bg-slate-950 text-center text-slate-500 text-sm">
-        <p>© {new Date().getFullYear()} Arum Dahlia. All rights reserved.</p>
+      <footer className="border-t border-zinc-800/60 mt-20 py-8 text-center text-zinc-600 text-xs">
+        <p>© {new Date().getFullYear()} Arum Dahlia. Minimal Portfolio Design.</p>
       </footer>
     </main>
   );
