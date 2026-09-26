@@ -7,13 +7,13 @@ export default function Home() {
           <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Arum Dahlia
           </span>
-          <div className="flex gap-4 text-sm font-medium text-slate-300">
-            <a href="#about" className="hover:text-cyan-400 transition">Tentang</a>
-            <a href="#education" className="hover:text-cyan-400 transition">Pendidikan</a>
-            <a href="#achievements" className="hover:text-cyan-400 transition">Prestasi</a>
-            <a href="#certifications" className="hover:text-cyan-400 transition">Sertifikat</a>
-            <a href="#skills" className="hover:text-cyan-400 transition">Skill</a>
-            <a href="#projects" className="hover:text-cyan-400 transition">Proyek</a>
+          <div className="flex gap-4 text-sm font-medium text-slate-300 overflow-x-auto py-1">
+            <a href="#about" className="hover:text-cyan-400 transition whitespace-nowrap">Tentang</a>
+            <a href="#work" className="hover:text-cyan-400 transition whitespace-nowrap">Pekerjaan</a>
+            <a href="#education" className="hover:text-cyan-400 transition whitespace-nowrap">Pendidikan</a>
+            <a href="#achievements" className="hover:text-cyan-400 transition whitespace-nowrap">Prestasi</a>
+            <a href="#certifications" className="hover:text-cyan-400 transition whitespace-nowrap">Sertifikat</a>
+            <a href="#skills" className="hover:text-cyan-400 transition whitespace-nowrap">Skill</a>
           </div>
         </div>
       </nav>
@@ -28,14 +28,14 @@ export default function Home() {
             Halo, Saya <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">Arum Dahlia</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Lulusan SMK Akuntansi & Keuangan Lembaga yang berfokus pada pengembangan diri, komunikasi, serta eksplorasi teknologi web modern.
+            Lulusan SMK Akuntansi & Keuangan Lembaga yang saat ini berkarir profesional dan aktif mengembangkan diri di bidang teknologi web modern.
           </p>
           <div className="flex justify-center gap-4 pt-4">
             <a
-              href="#projects"
+              href="#work"
               className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition shadow-lg shadow-cyan-500/20"
             >
-              Lihat Proyek
+              Lihat Karir & Proyek
             </a>
             <a
               href="mailto:arumdahlia67@gmail.com"
@@ -46,6 +46,29 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Pekerjaan Saat Ini */}
+        <section id="work" className="space-y-4">
+          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
+            <span className="text-cyan-400">#</span> Pengalaman Kerja Saat Ini
+          </h2>
+          <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-cyan-950/30 border border-cyan-500/40 p-6 md:p-8 rounded-2xl space-y-3 relative overflow-hidden">
+            <div className="flex justify-between items-start flex-wrap gap-2">
+              <div>
+                <span className="inline-block px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full text-xs font-semibold mb-2">
+                  Active / Current Position
+                </span>
+                <h3 className="text-2xl font-bold text-slate-100">PT PxxxxWxxx Indonesia</h3>
+              </div>
+              <span className="text-xs font-medium text-slate-400 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+                Sekarang
+              </span>
+            </div>
+            <p className="text-slate-300 leading-relaxed text-sm md:text-base">
+              Bekerja secara profesional di PT PxxxxWxxx Indonesia, berkontribusi dalam operasional perusahaan, serta menerapkan komunikasi profesional, kedisiplinan, dan manajemen kerja yang efektif.
+            </p>
+          </div>
+        </section>
+
         {/* About Section */}
         <section id="about" className="space-y-4">
           <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
@@ -53,7 +76,7 @@ export default function Home() {
           </h2>
           <div className="bg-slate-900/60 border border-slate-800 p-6 md:p-8 rounded-2xl space-y-4">
             <p className="text-slate-300 leading-relaxed">
-              Saya adalah seorang individu yang aktif, kompetitif, dan adaptif dengan latar belakang pendidikan Akuntansi dan Keuangan Lembaga dari SMKN 2 Blora. Memiliki beragam rekam jejak prestasi di bidang olahraga, seni, dan akademik sejak jenjang sekolah dasar, serta memiliki minat besar dalam dunia komunikasi dan teknologi.
+              Saya adalah seorang individu yang aktif, kompetitif, dan adaptif dengan latar belakang pendidikan Akuntansi dan Keuangan Lembaga dari SMKN 2 Blora. Memiliki beragam rekam jejak prestasi di bidang olahraga, seni, dan akademik sejak jenjang sekolah dasar, pengalaman praktis di bidang penyiaran radio, serta memiliki semangat belajar tinggi dalam dunia kerja profesional dan teknologi.
             </p>
           </div>
         </section>
@@ -157,7 +180,7 @@ export default function Home() {
         {/* Sertifikasi & Pengalaman SMK */}
         <section id="certifications" className="space-y-6">
           <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Sertifikasi & Keahlian (SMK N 2 Blora)
+            <span className="text-cyan-400">#</span> Sertifikasi & Pengalaman
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-cyan-500/50 transition">
@@ -187,10 +210,10 @@ export default function Home() {
         {/* Skills Section */}
         <section id="skills" className="space-y-6">
           <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Keahlian & Teknologi
+            <span className="text-cyan-400">#</span> Keahlian & Keterampilan
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Akuntansi & Keuangan', 'Public Speaking / Broadcasting', 'Next.js', 'Tailwind CSS', 'Git & GitHub', 'Node.js', 'Termux CLI', 'Vercel Deployment'].map((skill) => (
+            {['Akuntansi & Keuangan', 'Public Speaking / Broadcasting', 'Kerjasama Tim & Komunikasi', 'Next.js', 'Tailwind CSS', 'Git & GitHub', 'Node.js', 'Vercel Deployment'].map((skill) => (
               <div
                 key={skill}
                 className="bg-slate-900/80 border border-slate-800 p-4 rounded-xl text-center hover:border-cyan-500/50 transition group"
@@ -200,29 +223,6 @@ export default function Home() {
                 </span>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* Projects Section */}
-        <section id="projects" className="space-y-6">
-          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Proyek Unggulan
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-slate-700 transition">
-              <span className="text-xs font-semibold text-cyan-400 tracking-wider uppercase">Next.js + Vercel</span>
-              <h3 className="text-xl font-bold text-slate-100">Personal Portfolio Website</h3>
-              <p className="text-slate-400 text-sm">
-                Website portofolio pribadi modern yang di-deploy menggunakan Vercel dengan integrasi otomatis dari GitHub.
-              </p>
-            </div>
-            <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-slate-700 transition">
-              <span className="text-xs font-semibold text-cyan-400 tracking-wider uppercase">Broadcasting & Public Speaking</span>
-              <h3 className="text-xl font-bold text-slate-100">Radio Announcing & Media Project</h3>
-              <p className="text-slate-400 text-sm">
-                Pengalaman siaran radio interaktif, penyampaian informasi, dan pengelolaan program acara publik secara profesional.
-              </p>
-            </div>
           </div>
         </section>
       </div>
