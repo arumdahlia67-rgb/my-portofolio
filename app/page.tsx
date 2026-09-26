@@ -255,24 +255,6 @@ export default function Home() {
                     status: "Medali Perunggu",
                     badgeColor: "bg-amber-50 text-amber-800 border-amber-200",
                   },
-                  {
-                    title: "O2SN Pencak Silat",
-                    category: "Olahraga",
-                    status: "Juara 1 & Juara 2",
-                    badgeColor: "bg-blue-50 text-blue-800 border-blue-200",
-                  },
-                  {
-                    title: "POPDA Pencak Silat",
-                    category: "Olahraga Daerah",
-                    status: "Juara 2",
-                    badgeColor: "bg-indigo-50 text-indigo-800 border-indigo-200",
-                  },
-                  {
-                    title: "Turnamen Bola Volly Putri",
-                    category: "Kompetensi Tim",
-                    status: "Juara 1 Tim",
-                    badgeColor: "bg-purple-50 text-purple-800 border-purple-200",
-                  },
                 ].map((item, idx) => (
                   <div key={idx} className="p-4 md:p-5 flex justify-between items-center gap-4 hover:bg-slate-50 transition">
                     <div>
