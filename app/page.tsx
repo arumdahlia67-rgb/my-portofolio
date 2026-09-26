@@ -13,29 +13,28 @@ export default function Home() {
             <a href="#education" className="hover:text-cyan-400 transition whitespace-nowrap">Pendidikan</a>
             <a href="#achievements" className="hover:text-cyan-400 transition whitespace-nowrap">Prestasi</a>
             <a href="#certifications" className="hover:text-cyan-400 transition whitespace-nowrap">Sertifikat</a>
-            <a href="#skills" className="hover:text-cyan-400 transition whitespace-nowrap">Skill</a>
           </div>
         </div>
       </nav>
 
-      <div className="max-w-5xl mx-auto px-6 py-12 space-y-20">
+      <div className="max-w-5xl mx-auto px-6 py-12 space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6 pt-6">
           <div className="inline-block px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800 text-cyan-300 text-sm font-medium">
-            ✨ Welcome to My Personal Space
+            ✨ AI-Assisted Developer & Accounting Graduate
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
             Halo, Saya <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">Arum Dahlia</span>
           </h1>
-          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Lulusan SMK Akuntansi & Keuangan Lembaga yang saat ini berkarir profesional dan aktif mengembangkan diri di bidang teknologi web modern.
+          <p className="text-slate-300 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            Lulusan SMK Negeri 2 Blora tahun 2025 jurusan Akuntansi dan Keuangan Lembaga. Bukan orang IT, namun bersemangat memanfaatkan AI untuk eksplorasi <span className="text-cyan-400 font-semibold">Web Development</span> dan <span className="text-cyan-400 font-semibold">Keuangan Digital</span>.
           </p>
-          <div className="flex justify-center gap-4 pt-4">
+          <div className="flex justify-center gap-4 pt-2">
             <a
-              href="#work"
+              href="#about"
               className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition shadow-lg shadow-cyan-500/20"
             >
-              Lihat Karir & Proyek
+              Baca Perkenalan
             </a>
             <a
               href="mailto:arumdahlia67@gmail.com"
@@ -46,16 +45,31 @@ export default function Home() {
           </div>
         </section>
 
+        {/* About Section */}
+        <section id="about" className="space-y-4">
+          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
+            <span className="text-cyan-400">#</span> Perkenalan
+          </h2>
+          <div className="bg-slate-900/60 border border-slate-800 p-6 md:p-8 rounded-2xl space-y-4">
+            <p className="text-slate-300 leading-relaxed">
+              Nama saya Arum Dahlia, seorang lulusan SMK Negeri 2 Blora tahun 2025 jurusan Akuntansi dan Keuangan Lembaga. Saya bukan orang IT, tapi punya minat di bidang web development. Saya tidak begitu memahami teknik coding, melainkan berkreasi dengan bantuan AI.
+            </p>
+            <p className="text-slate-300 leading-relaxed">
+              Saat ini saya lagi fokus belajar di bidang keuangan digital dan memanfaatkan AI untuk mempermudah dalam pemecahan masalah. Saya sangat bersemangat mempelajari teknologi AI untuk masa depan dunia dan sebagai partner bertukar pikiran serta informasi, serta berminat menjadi seorang developer dengan bantuan AI. Selain itu, saya mempunyai hobi membaca dan tertarik mempelajari hal-hal baru.
+            </p>
+          </div>
+        </section>
+
         {/* Pekerjaan Saat Ini */}
         <section id="work" className="space-y-4">
           <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Pengalaman Kerja Saat Ini
+            <span className="text-cyan-400">#</span> Pekerjaan Saat Ini
           </h2>
-          <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-cyan-950/30 border border-cyan-500/40 p-6 md:p-8 rounded-2xl space-y-3 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-slate-900 via-slate-900 to-cyan-950/30 border border-cyan-500/40 p-6 md:p-8 rounded-2xl space-y-3">
             <div className="flex justify-between items-start flex-wrap gap-2">
               <div>
                 <span className="inline-block px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full text-xs font-semibold mb-2">
-                  Active / Current Position
+                  Pekerjaan Aktif
                 </span>
                 <h3 className="text-2xl font-bold text-slate-100">PT PxxxxWxxx Indonesia</h3>
               </div>
@@ -63,20 +77,8 @@ export default function Home() {
                 Sekarang
               </span>
             </div>
-            <p className="text-slate-300 leading-relaxed text-sm md:text-base">
-              Bekerja secara profesional di PT PxxxxWxxx Indonesia, berkontribusi dalam operasional perusahaan, serta menerapkan komunikasi profesional, kedisiplinan, dan manajemen kerja yang efektif.
-            </p>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section id="about" className="space-y-4">
-          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Tentang Saya
-          </h2>
-          <div className="bg-slate-900/60 border border-slate-800 p-6 md:p-8 rounded-2xl space-y-4">
             <p className="text-slate-300 leading-relaxed">
-              Saya adalah seorang individu yang aktif, kompetitif, dan adaptif dengan latar belakang pendidikan Akuntansi dan Keuangan Lembaga dari SMKN 2 Blora. Memiliki beragam rekam jejak prestasi di bidang olahraga, seni, dan akademik sejak jenjang sekolah dasar, pengalaman praktis di bidang penyiaran radio, serta memiliki semangat belajar tinggi dalam dunia kerja profesional dan teknologi.
+              Dan sekarang saya lagi bekerja di PT PxxxxWxxx Indonesia, membantu lancarnya operasional perusahaan dan bekerja sesuai SOP.
             </p>
           </div>
         </section>
@@ -84,7 +86,7 @@ export default function Home() {
         {/* Riwayat Pendidikan */}
         <section id="education" className="space-y-6">
           <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Riwayat Pendidikan
+            <span className="text-cyan-400">#</span> Riwayat Pendidikan (12 Tahun Sekolah)
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-2">
@@ -100,7 +102,7 @@ export default function Home() {
             <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-2 border-cyan-500/30">
               <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Sekolah Menengah Kejuruan</span>
               <h3 className="text-lg font-bold text-slate-100">SMK N 2 Blora</h3>
-              <p className="text-slate-400 text-sm">Akuntansi dan Keuangan Lembaga</p>
+              <p className="text-slate-400 text-sm">Akuntansi dan Keuangan Lembaga (Lulus 2025)</p>
             </div>
           </div>
         </section>
@@ -108,7 +110,7 @@ export default function Home() {
         {/* Prestasi */}
         <section id="achievements" className="space-y-6">
           <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Prestasi & Penghargaan
+            <span className="text-cyan-400">#</span> Prestasi Selama Sekolah
           </h2>
           
           <div className="space-y-6">
@@ -120,7 +122,6 @@ export default function Home() {
                   <div className="text-2xl">🥉</div>
                   <div>
                     <h4 className="font-bold text-slate-100">Medali Perunggu Olimpiade Pendidikan Agama Islam (2022)</h4>
-                    <p className="text-slate-400 text-sm">Tingkat Nasional / Daerah</p>
                   </div>
                 </div>
               </div>
@@ -177,52 +178,33 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sertifikasi & Pengalaman SMK */}
+        {/* Sertifikasi SMK N 2 Blora */}
         <section id="certifications" className="space-y-6">
           <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Sertifikasi & Pengalaman
+            <span className="text-cyan-400">#</span> Sertifikasi (SMK N 2 Blora)
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-cyan-500/50 transition">
               <span className="text-xs font-semibold text-emerald-400 tracking-wider uppercase">Predikat: Kompeten</span>
               <h3 className="text-lg font-bold text-slate-100">Uji Kompetensi Keahlian (UKK)</h3>
               <p className="text-slate-400 text-sm">
-                Sertifikat kelulusan uji kompetensi keahlian jurusan Akuntansi dan Keuangan Lembaga.
+                Akuntansi dan Keuangan Lembaga.
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-cyan-500/50 transition">
               <span className="text-xs font-semibold text-emerald-400 tracking-wider uppercase">Predikat: Sangat Bagus</span>
               <h3 className="text-lg font-bold text-slate-100">PKL Penyiar Radio</h3>
               <p className="text-slate-400 text-sm">
-                Sertifikat Praktik Kerja Lapangan (PKL) sebagai Penyiar Radio dengan pencapaian hasil sangat bagus.
+                Sertifikat Praktik Kerja Lapangan sebagai penyiar radio.
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl space-y-3 hover:border-cyan-500/50 transition">
               <span className="text-xs font-semibold text-cyan-400 tracking-wider uppercase">Sertifikat Pelatihan</span>
               <h3 className="text-lg font-bold text-slate-100">Viva Beauty</h3>
               <p className="text-slate-400 text-sm">
-                Sertifikat keikutsertaan / pelatihan dari Viva Beauty.
+                Sertifikat pelatihan dari Viva Beauty.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <section id="skills" className="space-y-6">
-          <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
-            <span className="text-cyan-400">#</span> Keahlian & Keterampilan
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Akuntansi & Keuangan', 'Public Speaking / Broadcasting', 'Kerjasama Tim & Komunikasi', 'Next.js', 'Tailwind CSS', 'Git & GitHub', 'Node.js', 'Vercel Deployment'].map((skill) => (
-              <div
-                key={skill}
-                className="bg-slate-900/80 border border-slate-800 p-4 rounded-xl text-center hover:border-cyan-500/50 transition group"
-              >
-                <span className="text-slate-300 font-medium group-hover:text-cyan-400 transition text-sm">
-                  {skill}
-                </span>
-              </div>
-            ))}
           </div>
         </section>
       </div>
