@@ -193,7 +193,8 @@ export default function Home() {
                       <span className="text-[11px] font-mono font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
                         Pekerjaan Utama
                       </span>
-                      <h3 className="text-base font-bold text-slate-900 mt-2">PT PxxxxWxxx Indonesia</h3>
+                      <h3 className="text-base font-bold text-slate-900 mt-2">Production Operator</h3>
+                      <p className="text-xs font-medium text-slate-500">PT PxxxxWxxx Indonesia</p>
                     </div>
                     <span className="text-xs text-slate-500 font-mono">2026 — Sekarang</span>
                   </div>
