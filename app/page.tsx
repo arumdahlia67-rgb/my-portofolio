@@ -207,9 +207,10 @@ export default function Home() {
                   <div className="flex justify-between items-start flex-wrap gap-2">
                     <div>
                       <span className="text-[11px] font-mono font-semibold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200">
-                        Pengalaman Komunikasi
+                        Internship
                       </span>
-                      <h3 className="text-base font-bold text-slate-900 mt-2">Radio Announcer (PKL)</h3>
+                      <h3 className="text-base font-bold text-slate-900 mt-2">On Air Talent</h3>
+                      <p className="text-xs font-medium text-slate-500">PT Sembilan Kali Sembilan</p>
                     </div>
                     <span className="text-xs text-slate-500 font-mono">Nilai: Sangat Bagus</span>
                   </div>
@@ -239,7 +240,7 @@ export default function Home() {
                     badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
                   },
                   {
-                    title: "Sertifikat Praktik Kerja Radio Announcer",
+                    title: "Sertifikat Internship On Air Talent - PT Sembilan Kali Sembilan",
                     category: "Sertifikasi Lapangan",
                     status: "Nilai: Sangat Bagus",
                     badgeColor: "bg-slate-100 text-slate-800 border-slate-300",
